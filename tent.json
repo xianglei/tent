@@ -32,6 +32,34 @@
           "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
         ]
       }
+    },
+
+    "pylearning3":
+    {
+      "build-name": "pylearning3-cpu",
+      "src": "/usr/lib/pylearning3",
+      "dest": "/usr/lib/pylearning3",
+      "version": "3.6.4+adh2.4.1+2",
+      "iteration": "1.adh2.4.1.p0.0",
+      "epoch": "0",
+      "license": "\"APACHE2.0\"",
+      "vendor": "xianglei@exadoop.com",
+      "summary": "\"Created by xianglei\"",
+      "url": "https://xianglei.tech",
+      "pre-install": "pre-install.sh",
+      "post-install": "post-install.sh",
+      "pre-uninstall": "pre-uninstall.sh",
+      "post-uninstall": "post-uninstall.sh",
+      "depends":
+      {
+        "centos":
+        [
+          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
+          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
+          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
+          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
+        ]
+      }
     }
   }
 }

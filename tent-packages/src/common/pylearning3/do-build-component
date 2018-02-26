@@ -14,6 +14,6 @@ cd ${BUILDROOT}/python3/
 ./configure --prefix=/usr/lib/pylearning3
 sudo make -j4 install
 cd /usr/lib/pylearning3/bin
-sudo ./pip install --upgrade setuptools pip
-sudo ./pip install awscli
+sudo ./pip3 install --upgrade setuptools pip
+sudo ./pip3 install awscli
 
