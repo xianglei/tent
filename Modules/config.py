@@ -9,7 +9,7 @@ import json
 class Parser(object):
     def __init__(self, filename='tent.json'):
         dirname = os.path.dirname(os.path.abspath(__file__))
-        self.root = dirname + '/../../'
+        self.root = dirname + '/../'
         try:
             with open(self.root + filename, 'rb') as tent:
                 data = json.loads(tent.read())
