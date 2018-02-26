@@ -77,12 +77,12 @@ class Builder(OSDist):
 
     def do_package(self, package):
         print 'DOING_BUILD_COMPONENT'
-        self.__do_build_component(package)
+        print self.__do_build_component(package)
         print 'PACKAGING'
         cmd = self.__construct_package_command(package)
         ret = self.__execution(cmd)
         print 'DOING_BUILD_CLEAN'
-        self.__do_build_clean(package)
+        print self.__do_build_clean(package)
         return ret
 
 
