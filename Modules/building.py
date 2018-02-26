@@ -44,10 +44,19 @@ class Builder(OSDist):
         script = self.root + 'tent-packages/src/common/' + component + '/do-build-clean'
         return self.__execution(script)
 
+    def __make_output_dir(self, package):
+        package_def = self.conf['packages'][package]
+        try:
+            os.makedirs(self.root + 'output/' + package_def['build-name'] + '/' + self.arch, 0o755)
+        except IOError, e:
+            print e.message
+
     def __construct_package_command(self, package):
+        self.__make_output_dir(package)
         package_def = self.conf['packages'][package]
         command = '/usr/local/bin/fpm '
         build_args = ' --epoch ' + package_def['epoch'] + ' -s dir -t ' + self.os_dist \
+                     + ' -n ' + package_def['build-name'] \
                      + ' -v ' + package_def['version'] + ' --iteration ' + package_def['iteration'] \
                      + ' --prefix ' + package_def['dest'] + ' -C ' + package_def['src'] \
                      + ' -p ' + self.root + 'output/' + package_def['build-name'] + '/' + self.arch \
