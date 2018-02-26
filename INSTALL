@@ -1,9 +1,12 @@
-Requirements:
+Centos Requirements:
     unzip
     wget
     gcc
     bzip2-devel
-    fpm
+    rpmbuild
+    sqlite-devel
+    cyrus-sasl-devel
+    createrepo
 
 Privilegs:
     root or sudo without passwd
