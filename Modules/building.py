@@ -47,7 +47,7 @@ class Builder(OSDist):
         package_def = self.conf['packages'][package]
         command = '/usr/local/bin/fpm '
         build_args = ' --epoch ' + package_def['epoch'] + ' -s dir -t ' + self.os_dist \
-                     + ' -v ' + package_def['version'] + ' --iterarion ' + package_def['iteration'] \
+                     + ' -v ' + package_def['version'] + ' --iteration ' + package_def['iteration'] \
                      + ' --prefix ' + package_def['dest'] + ' --C ' + package_def['src'] \
                      + ' -p ' + self.root + 'output/' + package_def['build-name'] + '/' + self.arch \
                      + ' --license ' + package_def['license'] \
