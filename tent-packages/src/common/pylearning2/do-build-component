@@ -1,0 +1,21 @@
+#!/bin/sh
+
+BASEDIR=$(cd `dirname $0`; pwd)
+DOWNLOADROOT=${BASEDIR}/../../../../dl
+OUTPUTROOT=${BASEDIR}/../../../../output
+BUILDROOT=${BASEDIR}/../../../../build
+
+cd ${BUILDROOT}/python2/
+./configure --prefix=/usr/lib/pylearning
+sudo make -j4 install
+cd /usr/lib/pylearning
+sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
+sudo unzip setuptools-38.5.1.zip
+cd setuptools-38.5.1
+sudo ../bin/python setup.py install
+cd ..
+sudo rm -rf setuptools*
+cd bin
+sudo ./easy_install pip
+sudo ./pip install awscli
+

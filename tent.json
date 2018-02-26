@@ -1,0 +1,37 @@
+{
+  "global":
+  {
+    "downloaded": "./dl/",
+    "output": "./output/"
+  },
+
+  "packages":{
+    "pylearning2":
+    {
+      "build-name": "pylearning2-cpu",
+      "src": "/usr/lib/pylearning",
+      "dest": "/usr/lib/pylearning",
+      "version": "2.7.14+adh2.4.1+2",
+      "iteration": "1.adh2.4.1.p0.6",
+      "epoch": "0",
+      "license": "APACHE2",
+      "vendor": "xianglei@exadoop.com",
+      "summary": "Created-by-xianglei",
+      "url": "https://xianglei.tech",
+      "pre-install": "pre-install.sh",
+      "post-install": "post-install.sh",
+      "pre-uninstall": "pre-uninstall.sh",
+      "post-uninstall": "post-uninstall.sh",
+      "depends":
+      {
+        "centos":
+        [
+          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
+          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
+          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
+          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BASEDIR=$(cd `dirname $0`; pwd)
+DOWNLOADROOT=${BASEDIR}/../../../../dl
+OUTPUTROOT=${BASEDIR}/../../../../output
+BUILDROOT=${BASEDIR}/../../../../build
+
+sudo rm -rf /usr/lib/pylearning
+sudo rm -rf ${BUILDROOT}/python2

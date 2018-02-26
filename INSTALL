@@ -1,0 +1,7 @@
+Requirements:
+    zip
+    wget
+    fpm
+
+Privilegs:
+    root or sudo without passwd
