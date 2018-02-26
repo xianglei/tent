@@ -14,11 +14,10 @@ class Parser(object):
             with open(self.root + filename, 'rb') as tent:
                 data = json.loads(tent.read())
                 self.conf = data
+            tent.close()
         except IOError, e:
             self.conf = ''
             print e.message
-        finally:
-            tent.close()
 
 
 
