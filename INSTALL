@@ -2,6 +2,7 @@ Requirements:
     unzip
     wget
     gcc
+    bzip2-devel
     fpm
 
 Privilegs:

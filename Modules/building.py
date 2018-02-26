@@ -63,9 +63,9 @@ class Builder(OSDist):
                       '/post-install.sh ' \
                       + ' --before-install ' + self.root + 'tent/packages/src/common/' + package + \
                       '/pre-install.sh ' \
-                      + ' --after-uninstall ' + self.root + 'tent/packages/src/common/' + package + \
+                      + ' --after-remove ' + self.root + 'tent/packages/src/common/' + package + \
                       '/post-uninstall.sh ' \
-                      + ' --before-uninstall ' + self.root + 'tent/packages/src/common/' + package + \
+                      + ' --before-remove ' + self.root + 'tent/packages/src/common/' + package + \
                       '/pre-uninstall.sh '
         dep_string = ''
         if self.os == 'centos':
