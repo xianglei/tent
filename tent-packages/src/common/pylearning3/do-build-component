@@ -4,11 +4,18 @@ BASEDIR=$(cd `dirname $0`; pwd)
 DOWNLOADROOT=${BASEDIR}/../../../../dl
 OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
+VERSION=3.6.4
+TARBALL=Python-${VERSION}.tgz
 
 cd ${DOWNLOADROOT}
-wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
-tar zxf Python-3.6.4.tgz
-mv Python-3.6.4 ${BUILDROOT}/python3
+if [ -f ${TARBALL} ];then
+    echo ${TARBALL}" exists, stop downloading"
+else
+    echo ${TARBALL}" not exists, downloading"
+    wget https://www.python.org/ftp/python/${VERSION}/${TARBALL}
+fi
+tar zxf ${TARBALL}
+mv Python-${VERSION} ${BUILDROOT}/python3
 
 cd ${BUILDROOT}/python3/
 ./configure --prefix=/usr/lib/pylearning3

@@ -13,7 +13,8 @@ class OSDist(Parser):
         Parser.__init__(self)
 
         os_dist = platform.dist()[0].lower()
-        if os_dist == 'centos':
+        self.os = os_dist
+        if os_dist == 'centos' or os_dist == 'redhat':
             self.os_dist = 'rpm'
             self.rpm_dist = 'el' + platform.dist()[1][0]
         elif os_dist == 'ubuntu' or os_dist == 'debian':
@@ -48,7 +49,7 @@ class Builder(OSDist):
         command = '/usr/local/bin/fpm '
         build_args = ' --epoch ' + package_def['epoch'] + ' -s dir -t ' + self.os_dist \
                      + ' -v ' + package_def['version'] + ' --iteration ' + package_def['iteration'] \
-                     + ' --prefix ' + package_def['dest'] + ' --C ' + package_def['src'] \
+                     + ' --prefix ' + package_def['dest'] + ' -C ' + package_def['src'] \
                      + ' -p ' + self.root + 'output/' + package_def['build-name'] + '/' + self.arch \
                      + ' --license ' + package_def['license'] \
                      + ' --vendor ' + package_def['vendor'] \
@@ -67,9 +68,10 @@ class Builder(OSDist):
                       + ' --before-uninstall ' + self.root + 'tent/packages/src/common/' + package + \
                       '/pre-uninstall.sh '
         dep_string = ''
-        if package_def['depends']['centos']:
-            for dep in package_def['depends']['centos']:
-                dep_string += ' --depends ' + dep + ' '
+        if self.os == 'centos':
+            if package_def['depends']['centos']:
+                for dep in package_def['depends']['centos']:
+                    dep_string += ' --depends ' + dep + ' '
         build_args += dep_string
 
         command += build_args

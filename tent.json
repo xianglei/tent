@@ -8,9 +8,9 @@
   "packages":{
     "pylearning2":
     {
-      "build-name": "pylearning2-cpu",
-      "src": "/usr/lib/pylearning",
-      "dest": "/usr/lib/pylearning",
+      "build-name": "pylearning2",
+      "src": "/usr/lib/pylearning2",
+      "dest": "/usr/lib/pylearning2",
       "version": "2.7.14+adh2.4.1+2",
       "iteration": "1.adh2.4.1.p0.6",
       "epoch": "0",
@@ -36,7 +36,7 @@
 
     "pylearning3":
     {
-      "build-name": "pylearning3-cpu",
+      "build-name": "pylearning3",
       "src": "/usr/lib/pylearning3",
       "dest": "/usr/lib/pylearning3",
       "version": "3.6.4+adh2.4.1+2",

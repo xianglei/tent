@@ -5,5 +5,5 @@ DOWNLOADROOT=${BASEDIR}/../../../../dl
 OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
 
-sudo rm -rf /usr/lib/pylearning
+sudo rm -rf /usr/lib/pylearning2
 sudo rm -rf ${BUILDROOT}/python2
