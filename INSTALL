@@ -1,6 +1,7 @@
 Requirements:
-    zip
+    unzip
     wget
+    gcc
     fpm
 
 Privilegs:

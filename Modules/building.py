@@ -76,14 +76,29 @@ class Builder(OSDist):
         return command
 
     def do_package(self, package):
-        print 'DOING_BUILD_COMPONENT'
-        print self.__do_build_component(package)
-        print 'PACKAGING'
+        print '--------DOING_BUILD_COMPONENT--------'
+        do_build = self.__do_build_component(package)
+        for so in do_build['stdout'].split('\n'):
+            print 'STDOUT: ' + so
+        for se in do_build['stderr'].split('\n'):
+            print 'STDERR: ' + se
+        print do_build['retcode']
+
+        print '--------PACKAGING--------'
         cmd = self.__construct_package_command(package)
-        ret = self.__execution(cmd)
-        print 'DOING_BUILD_CLEAN'
-        print self.__do_build_clean(package)
-        return ret
+        do_package = self.__execution(cmd)
+        for so in do_package['stdout'].split('\n'):
+            print 'STDOUT: ' + so
+        for se in do_package['stderr'].split('\n'):
+            print 'STDERR: ' + se
+        print do_package['retcode']
+        print '--------DOING_BUILD_CLEAN--------'
+        do_clean = self.__do_build_clean(package)
+        for so in do_clean['stdout'].split('\n'):
+            print 'STDOUT: ' + so
+        for se in do_clean['stderr'].split('\n'):
+            print 'STDERR: ' + se
+        print do_clean['retcode']
 
 
 
