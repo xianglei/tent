@@ -61,11 +61,11 @@ class Builder(OSDist):
         build_args += ' -f --verbose ' \
                       + ' --after-install ' + self.root + 'tent-packages/src/common/' + package + \
                       '/post-install.sh ' \
-                      + ' --before-install ' + self.root + 'tent/packages/src/common/' + package + \
+                      + ' --before-install ' + self.root + 'tent-packages/src/common/' + package + \
                       '/pre-install.sh ' \
-                      + ' --after-remove ' + self.root + 'tent/packages/src/common/' + package + \
+                      + ' --after-remove ' + self.root + 'tent-packages/src/common/' + package + \
                       '/post-uninstall.sh ' \
-                      + ' --before-remove ' + self.root + 'tent/packages/src/common/' + package + \
+                      + ' --before-remove ' + self.root + 'tent-packages/src/common/' + package + \
                       '/pre-uninstall.sh '
         dep_string = ''
         if self.os == 'centos':
