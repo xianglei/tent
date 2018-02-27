@@ -1,6 +1,10 @@
 #!/bin/sh
 
 BASEDIR=$(cd `dirname $0`; pwd)
+DOWNLOADROOT=${BASEDIR}/../../../../dl
+OUTPUTROOT=${BASEDIR}/../../../../output
+BUILDROOT=${BASEDIR}/../../../../build
+
 source ${BASEDIR}/../env.sh
 
 VERSION=2.7.14
@@ -32,8 +36,8 @@ sudo ./easy_install pip
 # sudo ./pip install awscli
 
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
-    source ./${OS_RELEASE}/${OS_RELEASE}/*
+    source ${BASEDIR}/./${OS_RELEASE}/${OS_RELEASE}/*
 elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
-    source ./${OS_RELEASE}/${OS_CODENAME}/*
+    source ${BASEDIR}/./${OS_RELEASE}/${OS_CODENAME}/*
 fi
 
