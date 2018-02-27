@@ -6,6 +6,7 @@ from config import Parser
 import subprocess
 import platform
 import os
+import sys
 
 
 class OSDist(Parser):
@@ -49,7 +50,8 @@ class Builder(OSDist):
         try:
             os.makedirs(self.root + 'output/' + package_def['build-name'] + '/' + self.arch, 0o755)
         except IOError, e:
-            print 'Output dir exists, continue to next'
+            print 'Output dir exists, exit'
+            sys.exit(1)
 
     def __construct_package_command(self, package):
         self.__make_output_dir(package)
