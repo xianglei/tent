@@ -72,6 +72,7 @@ class Builder(OSDist):
 
     def __do_build_component(self, component):
         self.__make_output_dir(component)
+        self.__gen_env_script(component)
         script = self.root + 'tent-packages/src/common/' + component + '/do-build-component'
         return self.__execution(script)
 
