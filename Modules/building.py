@@ -35,7 +35,7 @@ class Builder(OSDist):
         package_def = self.conf['packages'][package]
         dest = self.root + 'tent-packages/src/common/env.sh'
         dest_str = \
-        '''
+'''
 #!/bin/sh
 OS_VERSION=$(lsb_release -a | grep Release | awk '{print $2}' | awk -F'.' '{print $1}')
 OS_RELEASE=$(lsb_release -a | grep Distributor | awk '{print $3}' | tr 'A-Z' 'a-z')
@@ -51,8 +51,7 @@ if [[ $OS_RELEASE == 'centos' || $OS_RELEASE == 'redhat' ]]; then
         sudo yum makecache
     fi
 fi
-        
-        '''
+'''
         dest_str += 'BASE_VERSION=' + package_def['base-version'] + '\n'
         dest_str += 'CONFIG_PREFIX=' + package_def['dest'] + '\n'
 
