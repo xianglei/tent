@@ -50,7 +50,7 @@ class Builder(OSDist):
         package_def = self.conf['packages'][package]
         try:
             os.makedirs(self.root + 'output/' + package_def['build-name'] + '/' + self.arch, 0o755)
-        except IOError, e:
+        except Exception, e:
             print 'Output dir exists, exit'
             sys.exit(1)
 
