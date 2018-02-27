@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo ./pip install requests
+sudo ./pip install requests six
 sudo ./pip install aerospike amqp alluxio apscheduler avro awscli beautifulsoup4 bigml cassandra-driver celery opencv-python cx_oracle cython \
  easybase elasticsearch fabric freeze gensim Geohash gevent greenlet python-gssapi gym hbase-thrift hive-thrift-py jieba kafka kazoo keras kerberos \
  kombu log4python matplotlib mlpy mrjob networkx nltk numpy pandas pandas2sklearn pandas-oracle paramiko parquet pattern pika protobuf py4j \
