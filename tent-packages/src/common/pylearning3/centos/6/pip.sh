@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo ./pip install requests six numpy h5py
-sudo ./pip install aerospike amqp alluxio apscheduler automl avro awscli beautifulsoup4 bigml cassandra-driver celery opencv-python cx_oracle cython \
+sudo ./pip install requests six numpy h5py cython
+sudo ./pip install aerospike amqp alluxio apscheduler automl avro awscli beautifulsoup4 bigml cassandra-driver celery opencv-python cx_oracle \
  easybase elasticsearch fabric freeze graphviz gensim Geohash gevent greenlet python-gssapi gym hbase-thrift hive-thrift-py jieba kafka kazoo keras kerberos \
  kombu log4python matplotlib mlpy mrjob networkx nltk pandas pandas2sklearn pandas-oracle paramiko parquet pattern pika protobuf py4j \
  pyaccumulo pyaml python-crfsuite pyinstaller pymongo pymssql pymysql pyspark python-cassandra python-crfsuite python-memcached python-snappy redis \
