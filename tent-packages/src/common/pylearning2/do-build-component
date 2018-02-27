@@ -36,7 +36,7 @@ sudo ./easy_install pip
 # sudo ./pip install awscli
 
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
-    source ${BASEDIR}/./${OS_RELEASE}/${OS_RELEASE}/*
+    source ${BASEDIR}/./${OS_RELEASE}/${OS_VERSION}/*
 elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
     source ${BASEDIR}/./${OS_RELEASE}/${OS_CODENAME}/*
 fi
