@@ -1,16 +1,11 @@
 {
-  "global":
-  {
-    "downloaded": "./dl/",
-    "output": "./output/"
-  },
-
   "packages":{
     "pylearning2":
     {
       "build-name": "pylearning2",
       "src": "/usr/lib/pylearning2",
       "dest": "/usr/lib/pylearning2",
+      "base-version": "2.7.14",
       "version": "2.7.14+adh2.4.1+2",
       "iteration": "1.adh2.4.1.p0.6",
       "epoch": "0",
@@ -30,6 +25,10 @@
           "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
           "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
           "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
+        ],
+        "unbuntu":
+        [
+          "liblapack3", "liblapack-dev", "libopenblas-base", "libopenblas-dev", "freetds-common", "freetds-dev", "freetds-bin"
         ]
       }
     },
@@ -44,7 +43,6 @@
       "epoch": "0",
       "license": "\"APACHE2.0\"",
       "vendor": "xianglei@exadoop.com",
-      "summary": "\"Created by xianglei\"",
       "url": "https://xianglei.tech",
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",

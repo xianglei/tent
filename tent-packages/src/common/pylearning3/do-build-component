@@ -4,23 +4,30 @@ BASEDIR=$(cd `dirname $0`; pwd)
 DOWNLOADROOT=${BASEDIR}/../../../../dl
 OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
-VERSION=3.6.4
-TARBALL=Python-${VERSION}.tgz
+
+source ${BASEDIR}/../env.sh
+
+TARBALL=Python-${BASE_VERSION}.tgz
 
 cd ${DOWNLOADROOT}
 if [ -f ${TARBALL} ];then
     echo ${TARBALL}" exists, stop downloading"
 else
     echo ${TARBALL}" not exists, downloading"
-    wget https://www.python.org/ftp/python/${VERSION}/${TARBALL}
+    wget https://www.python.org/ftp/python/${BASE_VERSION}/${TARBALL}
 fi
 tar zxf ${TARBALL}
-mv Python-${VERSION} ${BUILDROOT}/python3
+mv Python-${BASE_VERSION} ${BUILDROOT}/python3
 
 cd ${BUILDROOT}/python3/
-./configure --prefix=/usr/lib/pylearning3
+./configure --prefix=${CONFIG_PREFIX}
 sudo make -j4 install
-cd /usr/lib/pylearning3/bin
+cd ${CONFIG_PREFIX}/bin
 sudo ./pip3 install --upgrade setuptools pip
-sudo ./pip3 install awscli
+
+if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
+    source ${BASEDIR}/./centos/${OS_VERSION}/*
+elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
+    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/*
+fi
 

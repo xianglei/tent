@@ -7,23 +7,22 @@ BUILDROOT=${BASEDIR}/../../../../build
 
 source ${BASEDIR}/../env.sh
 
-VERSION=2.7.14
-TARBALL=Python-${VERSION}.tgz
+TARBALL=Python-${BASE_VERSION}.tgz
 
 cd ${DOWNLOADROOT}
 if [ -f ${TARBALL} ];then
     echo ${TARBALL}" exists, stop downloading"
 else
     echo ${TARBALL}" not exists, downloading"
-    wget https://www.python.org/ftp/python/${VERSION}/${TARBALL}
+    wget https://www.python.org/ftp/python/${BASE_VERSION}/${TARBALL}
 fi
 tar zxf ${TARBALL}
-mv Python-${VERSION} ${BUILDROOT}/python2
+mv Python-${BASE_VERSION} ${BUILDROOT}/python2
 
 cd ${BUILDROOT}/python2/
-./configure --prefix=/usr/lib/pylearning2
+./configure --prefix=${CONFIG_PREFIX}
 sudo make -j4 install
-cd /usr/lib/pylearning2
+cd ${CONFIG_PREFIX}
 sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
 sudo unzip setuptools-38.5.1.zip
 cd setuptools-38.5.1
@@ -33,11 +32,9 @@ sudo rm -rf setuptools*
 cd bin
 sudo ./easy_install pip
 
-# sudo ./pip install awscli
-
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
-    source ${BASEDIR}/./${OS_RELEASE}/${OS_VERSION}/*
-elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
-    source ${BASEDIR}/./${OS_RELEASE}/${OS_CODENAME}/*
+    source ${BASEDIR}/./centos/${OS_VERSION}/*
+elif [[ ${OS_RELEASE} == 'ubuntu' || ${OS_RELEASE} == 'debian' ]]; then
+    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/*
 fi
 

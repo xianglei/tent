@@ -31,6 +31,39 @@ class Builder(OSDist):
         OSDist.__init__(self)
         self._rpm_dist = ''
 
+    def __gen_env_script(self, package):
+        package_def = self.conf['packages'][package]
+        dest = self.root + 'tent-packages/src/common/env.sh'
+        dest_str = \
+        '''
+        #!/bin/sh
+        OS_VERSION=$(lsb_release -a | grep Release | awk '{print $2}' | awk -F'.' '{print $1}')
+        OS_RELEASE=$(lsb_release -a | grep Distributor | awk '{print $3}' | tr 'A-Z' 'a-z')
+        OS_CODENAME=$(lsb_release -a | grep Codename | awk '{print $2}')
+        if [[ $OS_RELEASE == 'centos' || $OS_RELEASE == 'redhat' ]]; then
+            if [ ! -e /etc/yum.repos.d/epel.repo ]; then
+                if [ $OS_VERSION == '6' ]; then
+                    wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
+                fi
+                if [ $OS_VERSION == '7' ]; then
+                    wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+                fi
+                sudo yum makecache
+            fi
+        fi
+        
+        '''
+        dest_str += 'BASE_VERSION=' + package_def['base-version'] + '\n'
+        dest_str += 'CONFIG_PREFIX=' + package_def['dest'] + '\n'
+
+        try:
+            with open(dest, 'wb') as env:
+                env.write(dest_str)
+            env.close()
+        except IOError, e:
+            print 'Create env file error'
+            print e.message
+
     def __execution(self, command):
         p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True, shell=True)
         stdout, stderr = p.communicate()
@@ -64,7 +97,6 @@ class Builder(OSDist):
                      + ' -p ' + self.root + 'output/' + package_def['build-name'] + '/' + self.arch \
                      + ' --license ' + package_def['license'] \
                      + ' --vendor ' + package_def['vendor'] \
-                     + ' --rpm-summary ' + package_def['summary'] \
                      + ' --url ' + package_def['url'] \
                      + ' -a ' + self.arch
         if self.os_dist == 'rpm':
