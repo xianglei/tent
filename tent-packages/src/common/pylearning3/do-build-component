@@ -22,6 +22,10 @@ mv Python-${BASE_VERSION} ${BUILDROOT}/python3
 cd ${BUILDROOT}/python3/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
+
+sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6.so /usr/lib64/
+sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6.so.1.0 /usr/lib64/
+
 cd ${CONFIG_PREFIX}/bin
 sudo ./pip3 install --upgrade setuptools pip
 

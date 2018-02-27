@@ -6,4 +6,6 @@ OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
 
 sudo rm -rf /usr/lib/pylearning3
+sudo rm -f /usr/lib64/libpython3.6.so
+sudo rm -f /usr/lib64/libpython3.6.so.1.0
 # sudo rm -rf ${BUILDROOT}/python3

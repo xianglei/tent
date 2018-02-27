@@ -17,10 +17,10 @@ class OSDist(Parser):
         self.os = os_dist
         if os_dist == 'centos' or os_dist == 'redhat':
             self.os_dist = 'rpm'
-            self.rpm_dist = 'el' + platform.dist()[1][0]
+            self.pkg_dist = 'el' + platform.dist()[1][0]
         elif os_dist == 'ubuntu' or os_dist == 'debian':
             self.os_dist = 'deb'
-            self.rpm_dist = ''  # to do
+            self.pkg_dist = platform.dist()[2]  # to do
         else:
             self.os_dist = 'pkg'
         self.arch = platform.machine()
@@ -29,7 +29,6 @@ class OSDist(Parser):
 class Builder(OSDist):
     def __init__(self):
         OSDist.__init__(self)
-        self._rpm_dist = ''
 
     def __gen_env_script(self, package):
         package_def = self.conf['packages'][package]
@@ -100,7 +99,7 @@ fi
                      + ' --url ' + package_def['url'] \
                      + ' -a ' + self.arch
         if self.os_dist == 'rpm':
-            build_args += ' --rpm-dist ' + self.rpm_dist
+            build_args += ' --rpm-dist ' + self.pkg_dist
         build_args += ' -f --verbose ' \
                       + ' --after-install ' + self.root + 'tent-packages/src/common/' + package + \
                       '/post-install.sh ' \

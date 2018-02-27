@@ -22,6 +22,10 @@ mv Python-${BASE_VERSION} ${BUILDROOT}/python2
 cd ${BUILDROOT}/python2/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
+
+ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so /usr/lib64/
+ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so.1.0 /usr/lib64/
+
 cd ${CONFIG_PREFIX}
 sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
 sudo unzip setuptools-38.5.1.zip
