@@ -20,7 +20,7 @@ tar zxf ${TARBALL}
 mv Python-${BASE_VERSION} ${BUILDROOT}/python3
 
 cd ${BUILDROOT}/python3/
-./configure --prefix=${CONFIG_PREFIX}
+./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
 cd ${CONFIG_PREFIX}/bin
 sudo ./pip3 install --upgrade setuptools pip
