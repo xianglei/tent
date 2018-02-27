@@ -9,4 +9,4 @@ sudo ./pip install aerospike amqp alluxio apscheduler avro awscli beautifulsoup4
  thrift thriftpy tornado tqdm xgboost==0.4a30
 
 sudo ./pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp27-cp27m-linux_x86_64.whl
-sudo ./pip install  torchvision
+sudo ./pip install torchvision
