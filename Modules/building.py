@@ -33,7 +33,7 @@ class Builder(OSDist):
 
     def __gen_env_script(self, package):
         package_def = self.conf['packages'][package]
-        dest = self.root + 'tent-packages/src/common/env.sh'
+        dest = self.root + 'tent-packages/src/common/' + package + '/env.sh'
         dest_str = \
 '''
 #!/bin/sh

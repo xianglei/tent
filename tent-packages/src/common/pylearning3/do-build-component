@@ -5,7 +5,7 @@ DOWNLOADROOT=${BASEDIR}/../../../../dl
 OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
 
-source ${BASEDIR}/../env.sh
+source ${BASEDIR}/env.sh
 
 TARBALL=Python-${BASE_VERSION}.tgz
 
