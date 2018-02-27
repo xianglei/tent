@@ -3,10 +3,11 @@ Centos Requirements:
     wget
     gcc
     bzip2-devel
-    rpmbuild
+    rpm-build
     sqlite-devel
     cyrus-sasl-devel
     createrepo
+    redhat-lsb-core
 
 Privilegs:
     root or sudo without passwd
