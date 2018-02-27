@@ -38,6 +38,7 @@ class Builder(OSDist):
         return {'retcode': retcode, 'stdout': stdout, 'stderr': stderr}
 
     def __do_build_component(self, component):
+        self.__make_output_dir(component)
         script = self.root + 'tent-packages/src/common/' + component + '/do-build-component'
         return self.__execution(script)
 
@@ -54,7 +55,6 @@ class Builder(OSDist):
             sys.exit(1)
 
     def __construct_package_command(self, package):
-        self.__make_output_dir(package)
         package_def = self.conf['packages'][package]
         command = '/usr/local/bin/fpm '
         build_args = ' --epoch ' + package_def['epoch'] + ' -s dir -t ' + self.os_dist \
