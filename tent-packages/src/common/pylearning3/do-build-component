@@ -23,10 +23,10 @@ cd ${BUILDROOT}/python3/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
 
-if [ ! -h /usr/lib64/libpython3.6m.so ]; then
+if [ ! -f /usr/lib64/libpython3.6m.so ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6m.so /usr/lib64/
 fi
-if [ ! -h /usr/lib64/libpython3.6m.so.1.0 ]; then
+if [ ! -f /usr/lib64/libpython3.6m.so.1.0 ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6m.so.1.0 /usr/lib64/
 fi
 

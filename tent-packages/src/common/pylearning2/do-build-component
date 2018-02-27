@@ -23,10 +23,10 @@ cd ${BUILDROOT}/python2/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
 
-if [ ! -h /usr/lib64/libpython2.7.so ]; then
+if [ ! -f /usr/lib64/libpython2.7.so ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so /usr/lib64/
 fi
-if [ ! -h /usr/lib64/libpython2.7.so.1.0 ]; then
+if [ ! -f /usr/lib64/libpython2.7.so.1.0 ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so.1.0 /usr/lib64/
 fi
 
