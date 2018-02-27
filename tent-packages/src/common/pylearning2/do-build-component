@@ -1,6 +1,7 @@
 #!/bin/sh
 
-source ../env.sh
+BASEDIR=$(cd `dirname $0`; pwd)
+source ${BASEDIR}/../env.sh
 
 VERSION=2.7.14
 TARBALL=Python-${VERSION}.tgz
