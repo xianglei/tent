@@ -3,8 +3,10 @@
     "pylearning2":
     {
       "build-name": "pylearning2",
-      "src": "/usr/lib/pylearning2",
-      "dest": "/usr/lib/pylearning2",
+      "dl-url": "https://www.python.org/ftp/python",
+      "tarball": "Python-2.7.14.tgz",
+      "pkg-src": "/usr/lib/pylearning2",
+      "pkg-dest": "/usr/lib/pylearning2",
       "base-version": "2.7.14",
       "version": "2.7.14+adh2.4.1+2",
       "iteration": "1.adh2.4.1.p0.6",
@@ -35,8 +37,10 @@
     "pylearning3":
     {
       "build-name": "pylearning3",
-      "src": "/usr/lib/pylearning3",
-      "dest": "/usr/lib/pylearning3",
+      "dl-url":"https://www.python.org/ftp/python",
+      "tarball": "Python-3.6.4.tgz",
+      "pkg-src": "/usr/lib/pylearning3",
+      "pkg-dest": "/usr/lib/pylearning3",
       "base-version": "3.6.4",
       "version": "3.6.4+adh2.4.1+2",
       "iteration": "1.adh2.4.1.p0.0",

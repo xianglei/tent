@@ -52,7 +52,9 @@ if [[ $OS_RELEASE == 'centos' || $OS_RELEASE == 'redhat' ]]; then
 fi
 '''
         dest_str += 'BASE_VERSION=' + package_def['base-version'] + '\n'
-        dest_str += 'CONFIG_PREFIX=' + package_def['dest'] + '\n'
+        dest_str += 'CONFIG_PREFIX=' + package_def['pkg-dest'] + '\n'
+        dest_str += 'DLURL=' + package_def['dl-url'] + '\n'
+        dest_str += 'TARBALL=' + package_def['tarball'] + '\n'
 
         try:
             with open(dest, 'wb') as env:
@@ -92,7 +94,7 @@ fi
         build_args = ' --epoch ' + package_def['epoch'] + ' -s dir -t ' + self.os_dist \
                      + ' -n ' + package_def['build-name'] \
                      + ' -v ' + package_def['version'] + ' --iteration ' + package_def['iteration'] \
-                     + ' --prefix ' + package_def['dest'] + ' -C ' + package_def['src'] \
+                     + ' --prefix ' + package_def['pkg-dest'] + ' -C ' + package_def['pkg-src'] \
                      + ' -p ' + self.root + 'output/' + package_def['build-name'] + '/' + self.arch \
                      + ' --license ' + package_def['license'] \
                      + ' --vendor ' + package_def['vendor'] \

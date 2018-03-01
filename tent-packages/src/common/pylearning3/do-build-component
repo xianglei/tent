@@ -14,12 +14,12 @@ if [ -f ${TARBALL} ];then
     echo ${TARBALL}" exists, stop downloading"
 else
     echo ${TARBALL}" not exists, downloading"
-    wget https://www.python.org/ftp/python/${BASE_VERSION}/${TARBALL}
+    wget ${DLURL}/${BASE_VERSION}/${TARBALL}
 fi
 tar zxf ${TARBALL}
-mv Python-${BASE_VERSION} ${BUILDROOT}/python3
+mv Python-${BASE_VERSION} ${BUILDROOT}/
 
-cd ${BUILDROOT}/python3/
+cd ${BUILDROOT}/Python-${BASE_VERSION}/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
 sudo make -j4 install
 
