@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo ./pip install requests six numpy h5py cython
+sudo ./pip install requests
 sudo ./pip install six
 sudo ./pip install numpy
 sudo ./pip install h5py

@@ -5,7 +5,7 @@ sudo ./pip install six
 sudo ./pip install numpy
 sudo ./pip install h5py
 sudo ./pip install cython
-sudo ./pip install git+https://github.com/clips/pattern@development#egg=pattern
+sudo ./pip install pattern
 sudo ./pip install automl
 sudo ./pip install bigml
 sudo ./pip install beautifulsoup4
