@@ -32,13 +32,58 @@ sudo ./pip3 install theano
 sudo ./pip3 install xgboost==0.4a30
 sudo ./pip3 install opencv-contrib-python
 sudo ./pip3 install pyspark-hbase
-sudo ./pip3 install xgboost==0.4a30
-sudo ./pip3 install scrapy virtualenv aerospike amqp apscheduler avro awscli cassandra-driver celery cx_oracle \
- elasticsearch fabric freeze gevent greenlet python-gssapi hbase-thrift hive-thrift-py kafka kazoo kerberos \
- kombu log4python mrjob pandas-oracle paramiko parquet pika protobuf py4j \
- pyaml pyinstaller pymongo pymssql pymysql python-cassandra python-memcached python-snappy redis \
- django flask  simplejson tabulate teradata \
- thrift thriftpy tornado tqdm XlsxWriter PyStemmer python-lzo lzo-indexer
+sudo ./pip3 install thriftpy
+sudo ./pip3 install scrapy
+sudo ./pip3 install virtualenv
+sudo ./pip3 install aerospike
+sudo ./pip3 install amqp
+sudo ./pip3 install apsscheduler
+sudo ./pip3 install avro
+sudo ./pip3 install awscli
+sudo ./pip3 install cassandra-driver
+sudo ./pip3 install celery
+sudo ./pip3 install cx_oracle
+sudo ./pip3 install elasticsearch
+sudo ./pip3 install fabric
+sudo ./pip3 install freeze
+sudo ./pip3 install gevent
+sudo ./pip3 install greenlet
+sudo ./pip3 install python-gssapi
+sudo ./pip3 install hbase-thrift
+sudo ./pip3 install hive-thrift-py
+sudo ./pip3 install kafka
+sudo ./pip3 install kazoo
+sudo ./pip3 install kerberos
+sudo ./pip3 install kombu
+sudo ./pip3 install log4python
+sudo ./pip3 install mrjob
 sudo ./pip3 install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp36-cp36m-linux_x86_64.whl
 sudo ./pip3 install torchvision
 sudo ./pip3 install word2vec
+sudo ./pip3 install pandas-oracle
+sudo ./pip3 install paramiko
+sudo ./pip3 install parquet
+sudo ./pip3 install pika
+sudo ./pip3 install protobuf
+sudo ./pip3 install py4j
+sudo ./pip3 install pyaml
+sudo ./pip3 install pyinstaller
+sudo ./pip3 install pymongo
+sudo ./pip3 install pymssql
+sudo ./pip3 install pymysql
+sudo ./pip3 install python-cassandra
+sudo ./pip3 install python-memcached
+sudo ./pip3 install python-snappy
+sudo ./pip3 install redis
+sudo ./pip3 install django
+sudo ./pip3 install flask
+sudo ./pip3 install simplejson
+sudo ./pip3 install tabulate
+sudo ./pip3 install teradata
+sudo ./pip3 install thrift
+sudo ./pip3 install thriftpy
+sudo ./pip3 install tornado
+sudo ./pip3 install tqdm
+sudo ./pip3 install XlsxWriter
+sudo ./pip3 install PyStemmer
+sudo ./pip3 install python-lzo

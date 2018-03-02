@@ -30,18 +30,69 @@ sudp ./pip install snownlp
 sudo ./pip install spark-sklearn
 sudo ./pip install statsmodels
 sudo ./pip install theano
-sudo ./pip install xgboost==0.4a30
+sudo ./pip install xgboost
 sudo ./pip install opencv-contrib-python
 sudo ./pip install pyspark-hbase
 sudo ./pip install tensorflow
 sudo ./pip install mxnet
 sudo ./pip install tensorboard
-sudo ./pip install scrapy virtualenv aerospike amqp apscheduler avro awscli cassandra-driver celery cx_oracle \
- easybase elasticsearch fabric freeze gevent greenlet python-gssapi hbase-thrift hive-thrift-py kafka kazoo kerberos \
- kombu log4python mrjob pandas-oracle paramiko parquet pika protobuf py4j \
- pyaccumulo pyaml pyinstaller pymongo pymssql pymysql python-cassandra python-memcached python-snappy redis \
- django==1.11 flask simplejson tabulate teradata \
- thrift thriftpy tornado tqdm XlsxWriter PyStemmer python-lzo lzo-indexer
+sudo ./pip install scrapy
+sudo ./pip install virtualenv
+sudo ./pip install aerospike
+sudo ./pip install amqp
+sudo ./pip install apscheduler
+sudo ./pip install avro
+sudo ./pip install awscli
+sudo ./pip install cassandra-driver
+sudo ./pip install celery
+sudo ./pip install cx_oracle
+sudo ./pip install easybase
+sudo ./pip install elasticsearch
+sudo ./pip install fabric
+sudo ./pip install freeze
+sudo ./pip install gevent
+sudo ./pip install greelet
+sudo ./pip install python-gssapi
+sudo ./pip install hbase-thrift
+sudo ./pip install hive-thrift-py
+sudo ./pip install kafka
+sudo ./pip install kazoo
+sudo ./pip install kerberos
+sudo ./pip install pyaccumulo
+sudo ./pip install kombu
+sudo ./pip install log4python
+sudo ./pip install mrjob
+sudo ./pip install pandas-oracle
+sudo ./pip install paramiko
+sudo ./pip install parquet
+sudo ./pip install pika
+sudo ./pip install protobuf
+sudo ./pip install py4j
+sudo ./pip install pyaml
+sudo ./pip install pyinstaller
+sudo ./pip install pymongo
+sudo ./pip install pymssql
+sudo ./pip install pymysql
+sudo ./pip install python-cassandra
+sudo ./pip install python-memcached
+sudo ./pip install python-snappy
+sudo ./pip install redis
+sudo ./pip install django==1.11
+sudo ./pip install flask
+sudo ./pip install simplejson
+sudo ./pip install tabulate
+sudo ./pip install teradata
+sudo ./pip install thrift
+sudo ./pip install thriftpy
+sudo ./pip install tornado
+sudo ./pip install tqdm
+sudo ./pip install XlsxWriter
+sudo ./pip install Pytemmer
+sudo ./pip install python-lzo
 sudo ./pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp27-cp27m-linux_x86_64.whl
 sudo ./pip install torchvision
-sudo ./pip install word2vec fasttext lightgbm future futures
+sudo ./pip install word2vec
+sudo ./pip install fasttext
+sudo ./pip install lightgbm
+sudo ./pip install future
+sudo ./pip install futures
