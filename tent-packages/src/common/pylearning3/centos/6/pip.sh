@@ -41,7 +41,7 @@ sudo ./pip3 install scrapy
 sudo ./pip3 install virtualenv
 sudo ./pip3 install aerospike
 sudo ./pip3 install amqp
-sudo ./pip3 install apsscheduler
+sudo ./pip3 install apscheduler
 sudo ./pip3 install avro
 sudo ./pip3 install awscli
 sudo ./pip3 install cassandra-driver
