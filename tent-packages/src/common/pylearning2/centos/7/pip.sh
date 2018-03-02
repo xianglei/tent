@@ -1,6 +1,10 @@
 #!/bin/sh
 
 sudo ./pip install requests six numpy h5py cython
+sudo ./pip install six
+sudo ./pip install numpy
+sudo ./pip install h5py
+sudo ./pip install cython
 sudo ./pip install automl
 sudo ./pip install bigml
 sudo ./pip install beautifulsoup4
