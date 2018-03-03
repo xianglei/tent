@@ -30,7 +30,7 @@ sudo ./pip install seaborn
 sudo ./pip install sklearn
 sudo ./pip install sklearn-crfsuite
 sudo ./pip install sklearn-pandas
-sudp ./pip install snownlp
+sudo ./pip install snownlp
 sudo ./pip install spark-sklearn
 sudo ./pip install statsmodels
 sudo ./pip install theano
@@ -41,7 +41,7 @@ sudo ./pip install scrapy
 sudo ./pip install virtualenv
 sudo ./pip install aerospike
 sudo ./pip install amqp
-sudo ./pip install apsheduler
+sudo ./pip install apscheduler
 sudo ./pip install avro
 sudo ./pip install awscli
 sudo ./pip install cassandra-driver
@@ -80,7 +80,7 @@ sudo ./pip install python-snappy
 sudo ./pip install redis
 sudo ./pip install django==1.11
 sudo ./pip install flask
-sudo ./pip install simplejosn
+sudo ./pip install simplejson
 sudo ./pip install tabulate
 sudo ./pip install teradata
 sudo ./pip install thrift

@@ -30,7 +30,7 @@ sudo ./pip install seaborn
 sudo ./pip install sklearn
 sudo ./pip install sklearn-crfsuite
 sudo ./pip install sklearn-pandas
-sudp ./pip install snownlp
+sudo ./pip install snownlp
 sudo ./pip install spark-sklearn
 sudo ./pip install statsmodels
 sudo ./pip install theano
