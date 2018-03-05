@@ -8,6 +8,6 @@ BUILDROOT=${BASEDIR}/../../../../build
 source ${BASEDIR}/env.sh
 
 sudo rm -rf /usr/lib/pylearning3
-sudo rm -f /usr/lib64/libpython3.6.so
-sudo rm -f /usr/lib64/libpython3.6.so.1.0
+#sudo rm -f /usr/lib64/libpython3.6.so
+#sudo rm -f /usr/lib64/libpython3.6.so.1.0
 sudo rm -rf ${BUILDROOT}/Python-${BASE_VERSION}
