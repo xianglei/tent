@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo ./pip3 install --upgrade setuptools pip
 sudo ./pip3 install requests six numpy h5py cython
 sudo ./pip3 install git+https://github.com/clips/pattern@development#egg=pattern
 sudo ./pip3 install automl
@@ -29,7 +30,6 @@ sudo ./pip3 install snownlp
 sudo ./pip3 install spark-sklearn
 sudo ./pip3 install statsmodels
 sudo ./pip3 install theano
-sudo ./pip3 install xgboost==0.4a30
 sudo ./pip3 install opencv-contrib-python
 sudo ./pip3 install pyspark-hbase
 sudo ./pip3 install xgboost==0.4a30
