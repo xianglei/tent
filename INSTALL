@@ -12,6 +12,8 @@ Centos Requirements:
     gdbm-devel
     ncurses-devel
     readline-devel
+    lzo
+    lzo-devel
 
 
 Privilegs:

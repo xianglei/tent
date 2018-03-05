@@ -73,7 +73,6 @@ sudo ./pip3 install pika
 sudo ./pip3 install protobuf
 sudo ./pip3 install py4j
 sudo ./pip3 install python-geohash
-sudo ./pip3 install pyaccumulo
 sudo ./pip3 install pyaml
 sudo ./pip3 install python-crfsuite
 sudo ./pip3 install pyinstaller
@@ -107,7 +106,7 @@ sudo ./pip3 install XlsxWriter
 sudo ./pip3 install PyStemmer
 sudo ./pip3 install python-lzo
 sudo ./pip3 install lzo-indexer
-sudo ./pip3 install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp27-cp27m-linux_x86_64.whl
+sudo ./pip3 install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp36-cp36m-linux_x86_64.whl
 sudo ./pip3 install torchvision
 sudo ./pip3 install word2vec
 sudo ./pip3 install fasttext
