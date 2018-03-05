@@ -20,7 +20,7 @@ tar zxf ${TARBALL}
 mv Python-${BASE_VERSION} ${BUILDROOT}/
 
 cd ${BUILDROOT}/Python-${BASE_VERSION}/
-./configure --prefix=${CONFIG_PREFIX} --enable-optimizations
+./configure --prefix=${CONFIG_PREFIX} --enable-optimizations --enable-unicode=ucs4
 make -j4
 sudo make install
 
