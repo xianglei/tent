@@ -21,7 +21,8 @@ mv Python-${BASE_VERSION} ${BUILDROOT}/
 
 cd ${BUILDROOT}/Python-${BASE_VERSION}/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
-sudo make -j4 install
+make -j4
+sudo make install
 
 if [ ! -f /usr/lib64/libpython2.7.so ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so /usr/lib64/

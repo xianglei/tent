@@ -21,7 +21,8 @@ mv Python-${BASE_VERSION} ${BUILDROOT}/
 
 cd ${BUILDROOT}/Python-${BASE_VERSION}/
 ./configure --prefix=${CONFIG_PREFIX} --enable-shared
-sudo make -j4 install
+make -j4
+sudo make install
 
 if [ ! -f /usr/lib64/libpython3.6m.so ]; then
     sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6m.so /usr/lib64/
