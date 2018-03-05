@@ -24,6 +24,7 @@ sudo ./pip3 install pandas
 sudo ./pip3 install pandas2sklearn
 sudo ./pip3 install python-geohash
 sudo ./pip3 install python-crfsuite
+sudo ./pip3 install py4j
 sudo ./pip3 install pyspark
 sudo ./pip3 install scipy
 sudo ./pip3 install seaborn
@@ -33,7 +34,6 @@ sudo ./pip3 install sklearn-pandas
 sudo ./pip3 install snownlp
 sudo ./pip3 install spark-sklearn
 sudo ./pip3 install statsmodels
-sudo ./pip3 install theano
 sudo ./pip3 install opencv-contrib-python
 sudo ./pip3 install pyspark-hbase
 sudo ./pip3 install thriftpy
@@ -69,7 +69,6 @@ sudo ./pip3 install paramiko
 sudo ./pip3 install parquet
 sudo ./pip3 install pika
 sudo ./pip3 install protobuf
-sudo ./pip3 install py4j
 sudo ./pip3 install pyaml
 sudo ./pip3 install pyinstaller
 sudo ./pip3 install pymongo

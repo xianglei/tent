@@ -21,9 +21,10 @@ sudo ./pip install networkx
 sudo ./pip install nltk
 sudo ./pip install pandas
 sudo ./pip install pandas2sklearn
-sudo ./pip install git+https://github.com/clips/pattern@development#egg=pattern
+sudo ./pip install pattern
 sudo ./pip install python-geohash
 sudo ./pip install python-crfsuite
+sudo ./pip install py4j
 sudo ./pip install pyspark
 sudo ./pip install scipy
 sudo ./pip install seaborn
@@ -33,7 +34,6 @@ sudo ./pip install sklearn-pandas
 sudo ./pip install snownlp
 sudo ./pip install spark-sklearn
 sudo ./pip install statsmodels
-sudo ./pip install theano
 sudo ./pip install xgboost
 sudo ./pip install opencv-contrib-python
 sudo ./pip install pyspark-hbase
@@ -55,7 +55,7 @@ sudo ./pip install elasticsearch
 sudo ./pip install fabric
 sudo ./pip install freeze
 sudo ./pip install gevent
-sudo ./pip install greelet
+sudo ./pip install greenlet
 sudo ./pip install python-gssapi
 sudo ./pip install hbase-thrift
 sudo ./pip install hive-thrift-py
@@ -70,7 +70,6 @@ sudo ./pip install paramiko
 sudo ./pip install parquet
 sudo ./pip install pika
 sudo ./pip install protobuf
-sudo ./pip install py4j
 sudo ./pip install pyaml
 sudo ./pip install pyinstaller
 sudo ./pip install pymongo

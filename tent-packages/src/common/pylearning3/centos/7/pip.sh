@@ -24,6 +24,7 @@ sudo ./pip3 install pandas
 sudo ./pip3 install pandas2sklearn
 sudo ./pip3 install python-geohash
 sudo ./pip3 install python-crfsuite
+sudo ./pip3 install py4j
 sudo ./pip3 install pyspark
 sudo ./pip3 install scipy
 sudo ./pip3 install seaborn
@@ -33,7 +34,6 @@ sudo ./pip3 install sklearn-pandas
 sudo ./pip3 install snownlp
 sudo ./pip3 install spark-sklearn
 sudo ./pip3 install statsmodels
-sudo ./pip3 install theano
 sudo ./pip3 install xgboost
 sudo ./pip3 install opencv-contrib-python
 sudo ./pip3 install pyspark-hbase
@@ -50,7 +50,6 @@ sudo ./pip3 install awscli
 sudo ./pip3 install cassandra-driver
 sudo ./pip3 install celery
 sudo ./pip3 install cx_oracle
-sudo ./pip3 install easybase
 sudo ./pip3 install elasticsearch
 sudo ./pip3 install fabric
 sudo ./pip3 install freeze
@@ -68,10 +67,8 @@ sudo ./pip3 install mrjob
 sudo ./pip3 install pandas-oracle
 sudo ./pip3 install paramiko
 sudo ./pip3 install parquet
-sudo ./pip3 install pattern
 sudo ./pip3 install pika
 sudo ./pip3 install protobuf
-sudo ./pip3 install py4j
 sudo ./pip3 install python-geohash
 sudo ./pip3 install pyaml
 sudo ./pip3 install python-crfsuite
@@ -97,7 +94,6 @@ sudo ./pip3 install spark-sklearn
 sudo ./pip3 install statsmodels
 sudo ./pip3 install tabulate
 sudo ./pip3 install teradata
-sudo ./pip3 install theano
 sudo ./pip3 install thrift
 sudo ./pip3 install thriftpy
 sudo ./pip3 install tornado
@@ -112,4 +108,3 @@ sudo ./pip3 install word2vec
 sudo ./pip3 install fasttext
 sudo ./pip3 install lightgbm
 sudo ./pip3 install future
-sudo ./pip3 install futures

@@ -24,6 +24,7 @@ sudo ./pip install pandas
 sudo ./pip install pandas2sklearn
 sudo ./pip install python-geohash
 sudo ./pip install python-crfsuite
+sudo ./pip install py4j
 sudo ./pip install pyspark
 sudo ./pip install scipy
 sudo ./pip install seaborn
@@ -67,7 +68,6 @@ sudo ./pip install paramiko
 sudo ./pip install parquet
 sudo ./pip install pika
 sudo ./pip install protobuf
-sudo ./pip install py4j
 sudo ./pip install pyaccumulo
 sudo ./pip install pyaml
 sudo ./pip install pyinstaller
