@@ -8,6 +8,11 @@ Centos Requirements:
     cyrus-sasl-devel
     createrepo
     redhat-lsb-core
+    bsddb-devel
+    gdbm-devel
+    ncurses-devel
+    readline-devel
+
 
 Privilegs:
     root or sudo without passwd

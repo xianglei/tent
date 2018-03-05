@@ -20,16 +20,16 @@ tar zxf ${TARBALL}
 mv Python-${BASE_VERSION} ${BUILDROOT}/
 
 cd ${BUILDROOT}/Python-${BASE_VERSION}/
-./configure --prefix=${CONFIG_PREFIX} --enable-shared
+./configure --prefix=${CONFIG_PREFIX} --enable-optimizations
 make -j4
 sudo make install
 
-if [ ! -f /usr/lib64/libpython2.7.so ]; then
-    sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so /usr/lib64/
-fi
-if [ ! -f /usr/lib64/libpython2.7.so.1.0 ]; then
-    sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so.1.0 /usr/lib64/
-fi
+#if [ ! -L /usr/lib64/libpython2.7.so ]; then
+#    sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so /usr/lib64/
+#fi
+#if [ ! -L /usr/lib64/libpython2.7.so.1.0 ]; then
+#    sudo ln -sf ${CONFIG_PREFIX}/lib/libpython2.7.so.1.0 /usr/lib64/
+#fi
 
 cd ${CONFIG_PREFIX}
 sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
