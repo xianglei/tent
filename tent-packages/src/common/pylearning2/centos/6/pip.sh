@@ -14,6 +14,7 @@ sudo ./pip install graphviz
 sudo ./pip install gensim
 sudo ./pip install Geohash
 sudo ./pip install gym
+sudo ./pip install elasticsearch
 sudo ./pip install jieba
 sudo ./pip install keras
 sudo ./pip install matplotlib

@@ -16,5 +16,5 @@ Centos Requirements:
     lzo-devel
 
 
-Privilegs:
+Privileges:
     root or sudo without passwd

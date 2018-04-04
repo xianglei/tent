@@ -7,6 +7,7 @@ sudo ./pip3 install numpy
 sudo ./pip3 install h5py
 sudo ./pip3 install cython
 sudo ./pip3 install git+https://github.com/clips/pattern@development#egg=pattern
+sudo ./pip3 install elasticsearch
 sudo ./pip3 install automl
 sudo ./pip3 install beautifulsoup4
 sudo ./pip3 install bigml

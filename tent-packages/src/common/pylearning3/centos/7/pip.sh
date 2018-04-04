@@ -108,3 +108,4 @@ sudo ./pip3 install word2vec
 sudo ./pip3 install fasttext
 sudo ./pip3 install lightgbm
 sudo ./pip3 install future
+sudo ./pip3 install elasticsearch

@@ -98,3 +98,4 @@ sudo ./pip install fasttext
 sudo ./pip install lightgbm
 sudo ./pip install future
 sudo ./pip install futures
+sudo ./pip install elasticsearch
