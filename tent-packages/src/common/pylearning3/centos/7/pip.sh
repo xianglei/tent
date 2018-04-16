@@ -111,3 +111,4 @@ sudo ./pip3 install future
 sudo ./pip3 install elasticsearch
 sudo ./pip3 install alluxio
 sudo ./pip3 install theano
+sudo ./pip3 install sparkflow

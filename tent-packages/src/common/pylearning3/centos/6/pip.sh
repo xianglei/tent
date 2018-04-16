@@ -93,3 +93,4 @@ sudo ./pip3 install PyStemmer
 sudo ./pip3 install python-lzo
 sudo ./pip3 install alluxio
 sudo ./pip3 install theano
+sudo ./pip3 install sparkflow
