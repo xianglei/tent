@@ -99,3 +99,5 @@ sudo ./pip install lightgbm
 sudo ./pip install future
 sudo ./pip install futures
 sudo ./pip install elasticsearch
+sudo ./pip install alluxio
+sudo ./pip install theano

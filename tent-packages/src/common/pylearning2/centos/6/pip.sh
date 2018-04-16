@@ -94,3 +94,4 @@ sudo ./pip install python-lzo
 sudo ./pip install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp27-cp27mu-linux_x86_64.whl
 sudo ./pip install torchvision
 sudo ./pip install word2vec
+sudo ./pip install alluxio

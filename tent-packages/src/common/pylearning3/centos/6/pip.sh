@@ -91,3 +91,5 @@ sudo ./pip3 install tqdm
 sudo ./pip3 install XlsxWriter
 sudo ./pip3 install PyStemmer
 sudo ./pip3 install python-lzo
+sudo ./pip3 install alluxio
+sudo ./pip3 install theano
