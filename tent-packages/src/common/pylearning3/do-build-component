@@ -32,6 +32,7 @@ sudo make install
 #fi
 
 cd ${CONFIG_PREFIX}/bin
+./pip3 install --upgrade pip setuptools
 
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
     source ${BASEDIR}/./centos/${OS_VERSION}/*

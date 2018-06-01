@@ -40,6 +40,7 @@ cd ..
 sudo rm -rf setuptools*
 cd bin
 sudo ./easy_install pip
+sudo ./pip install --upgrade setuptools pip
 
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
     source ${BASEDIR}/./centos/${OS_VERSION}/*
