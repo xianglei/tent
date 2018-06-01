@@ -8,8 +8,14 @@ import sys
 builder = Builder()
 
 if '__main__' == __name__:
-    component = sys.argv[1]
-    builder.do_package(component)
+    if not sys.argv[1]:
+        print 'Usage: ./tent component'
+        print 'Available components:'
+        print '     pylearning2'
+        print '     pylearning3'
+    else:
+        component = sys.argv[1]
+        builder.do_package(component)
 
 
 

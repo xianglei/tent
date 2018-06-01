@@ -4,11 +4,11 @@
     {
       "build-name": "pylearning2",
       "dl-url": "https://www.python.org/ftp/python",
-      "tarball": "Python-2.7.14.tgz",
+      "tarball": "Python-2.7.15.tgz",
       "pkg-src": "/usr/lib/pylearning2",
       "pkg-dest": "/usr/lib/pylearning2",
-      "base-version": "2.7.14",
-      "version": "2.7.14+adh2.4.1+2",
+      "base-version": "2.7.15",
+      "version": "2.7.15+adh2.4.1+3",
       "iteration": "1.adh2.4.1.p0.7",
       "epoch": "0",
       "license": "\"APACHE2.0\"",
@@ -17,32 +17,18 @@
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
-      "post-uninstall": "post-uninstall.sh",
-      "depends":
-      {
-        "centos":
-        [
-          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
-          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
-          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
-          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
-        ],
-        "unbuntu":
-        [
-          "liblapack3", "liblapack-dev", "libopenblas-base", "libopenblas-dev", "freetds-common", "freetds-dev", "freetds-bin"
-        ]
-      }
+      "post-uninstall": "post-uninstall.sh"
     },
 
     "pylearning3":
     {
       "build-name": "pylearning3",
       "dl-url":"https://www.python.org/ftp/python",
-      "tarball": "Python-3.6.4.tgz",
+      "tarball": "Python-3.6.5.tgz",
       "pkg-src": "/usr/lib/pylearning3",
       "pkg-dest": "/usr/lib/pylearning3",
-      "base-version": "3.6.4",
-      "version": "3.6.4+adh2.4.1+2",
+      "base-version": "3.6.5",
+      "version": "3.6.5+adh2.4.1+3",
       "iteration": "1.adh2.4.1.p0.1",
       "epoch": "0",
       "license": "\"APACHE2.0\"",
@@ -51,17 +37,7 @@
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
-      "post-uninstall": "post-uninstall.sh",
-      "depends":
-      {
-        "centos":
-        [
-          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
-          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
-          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
-          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
-        ]
-      }
+      "post-uninstall": "post-uninstall.sh"
     }
   }
 }

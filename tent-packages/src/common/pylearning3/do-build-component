@@ -5,8 +5,15 @@ DOWNLOADROOT=${BASEDIR}/../../../../dl
 OUTPUTROOT=${BASEDIR}/../../../../output
 BUILDROOT=${BASEDIR}/../../../../build
 
+# Prepare compile OS dependencies
 source ${BASEDIR}/env.sh
+if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
+    source ${BASEDIR}/./centos/${OS_VERSION}/dependencies.sh
+elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
+    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/dependencies.sh
+fi
 
+# Download Python and compile
 TARBALL=Python-${BASE_VERSION}.tgz
 
 cd ${DOWNLOADROOT}
@@ -31,12 +38,14 @@ sudo make install
 #    sudo ln -sf ${CONFIG_PREFIX}/lib/libpython3.6m.so.1.0 /usr/lib64/
 #fi
 
+# update pip and setuptools
 cd ${CONFIG_PREFIX}/bin
 ./pip3 install --upgrade pip setuptools
 
+# install needed pip packages
 if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
-    source ${BASEDIR}/./centos/${OS_VERSION}/*
+    source ${BASEDIR}/./centos/${OS_VERSION}/pip.sh
 elif [[ ${OS_RELEASE} == 'ubuntu' ]]; then
-    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/*
+    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/pip.sh
 fi
 
