@@ -6,6 +6,7 @@ sudo ./pip3 install six
 sudo ./pip3 install numpy
 sudo ./pip3 install h5py
 sudo ./pip3 install cython
+sudo ./pip3 install bayesian-optimization
 sudo ./pip3 install git+https://github.com/clips/pattern@development#egg=pattern
 sudo ./pip3 install automl
 sudo ./pip3 install beautifulsoup4
