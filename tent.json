@@ -47,7 +47,7 @@
       "tarball": "Python-2.7.15.tgz",
       "pkg-src": "/usr/lib/dmp4agent",
       "pkg-dest": "/usr/lib/dmp4agent",
-      "base-version": "0.0.1",
+      "base-version": "2.7.15",
       "version": "0.0.1",
       "iteration": "p0.0",
       "epoch": "0",
