@@ -1,0 +1,66 @@
+#!/bin/sh
+
+BASEDIR=$(cd `dirname $0`; pwd)
+DOWNLOADROOT=${BASEDIR}/../../../../dl
+OUTPUTROOT=${BASEDIR}/../../../../output
+BUILDROOT=${BASEDIR}/../../../../build
+
+# Prepare compile OS dependencies
+source ${BASEDIR}/env.sh
+#if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
+#    source ${BASEDIR}/./centos/${OS_VERSION}/dependencies.sh
+#elif [[ ${OS_RELEASE} == 'ubuntu' || ${OS_RELEASE} == 'debian' ]]; then
+#    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/dependencies.sh
+#fi
+
+# Download Python and compile
+TARBALL=Python-${BASE_VERSION}.tgz
+
+cd ${DOWNLOADROOT}
+if [ -f ${TARBALL} ];then
+    echo ${TARBALL}" exists, stop downloading"
+else
+    echo ${TARBALL}" not exists, downloading"
+    wget ${DLURL}/${BASE_VERSION}/${TARBALL}
+fi
+tar zxf ${TARBALL}
+mv Python-${BASE_VERSION} ${BUILDROOT}/
+
+cd ${BUILDROOT}/Python-${BASE_VERSION}/
+./configure --prefix=${CONFIG_PREFIX} --enable-optimizations
+make -j4
+sudo make install
+
+# install setuptools
+cd ${CONFIG_PREFIX}
+sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
+sudo unzip setuptools-38.5.1.zip
+cd setuptools-38.5.1
+sudo ../bin/python setup.py install
+cd ..
+sudo rm -rf setuptools*
+cd bin
+sudo ./easy_install pip
+sudo ./pip install --upgrade setuptools pip
+
+# install needed pip packages
+if [[ ${OS_RELEASE} == 'centos' || ${OS_RELEASE} == 'redhat' ]]; then
+    source ${BASEDIR}/./centos/${OS_VERSION}/pip.sh
+elif [[ ${OS_RELEASE} == 'ubuntu' || ${OS_RELEASE} == 'debian' ]]; then
+    source ${BASEDIR}/./ubuntu/${OS_CODENAME}/pip.sh
+fi
+
+
+# clone or pull agent
+cd ${DOWNLOADROOT}
+DMP4DEPLOY=${DOWNLOADROOT}/dmp4deploy
+if [ ! -d $DMP4DEPLOY ]; then
+    git clone http://xianglei@code.admaster.co/xianglei/dmp4deploy.git
+    cd $DMP4DEPLOY
+    git branch package
+else
+    cd $DMP4DEPLOY
+    git pull
+    git branch package
+fi
+cp -rf $DMP4DEPLOY/agent/agent /usr/lib/dmp4agent/

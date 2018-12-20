@@ -1,0 +1,12 @@
+#!/bin/sh
+
+BASEDIR=$(cd `dirname $0`; pwd)
+DOWNLOADROOT=${BASEDIR}/../../../../dl
+OUTPUTROOT=${BASEDIR}/../../../../output
+BUILDROOT=${BASEDIR}/../../../../build
+
+source ${BASEDIR}/env.sh
+
+sudo rm -rf /usr/lib/dmp4agent
+sudo rm -rf ${BUILDROOT}/Python-${BASE_VERSION}
+sudo rm -rf $DOWNLOADROOT/dmp4deploy

@@ -38,6 +38,26 @@
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
       "post-uninstall": "post-uninstall.sh"
+    },
+
+    "dmp4agent":
+    {
+      "build-name": "dmpp4agent",
+      "dl-url": "https://www.python.org/ftp/python",
+      "tarball": "Python-2.7.15.tgz",
+      "pkg-src": "/usr/lib/dmp4agent",
+      "pkg-dest": "/usr/lib/dmp4agent",
+      "base-version": "0.0.1",
+      "version": "0.0.1",
+      "iteration": "p0.0",
+      "epoch": "0",
+      "license": "\"APACHE2.0\"",
+      "vendor": "xianglei@exadoop.com",
+      "url": "https://xianglei.tech",
+      "pre-install": "pre-install.sh",
+      "post-install": "post-install.sh",
+      "pre-uninstall": "pre-uninstall.sh",
+      "post-uninstall": "post-uninstall.sh"
     }
   }
 }
