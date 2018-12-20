@@ -57,10 +57,10 @@ DMP4DEPLOY=${DOWNLOADROOT}/dmp4deploy
 if [ ! -d $DMP4DEPLOY ]; then
     git clone http://xianglei@code.admaster.co/xianglei/dmp4deploy.git
     cd $DMP4DEPLOY
-    git branch package
+    git checkout package
 else
     cd $DMP4DEPLOY
     git pull
-    git branch package
+    git checkout package
 fi
 cp -rf $DMP4DEPLOY/agent/agent /usr/lib/dmp4agent/
