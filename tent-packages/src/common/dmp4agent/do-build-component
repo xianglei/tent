@@ -27,12 +27,12 @@ tar zxf ${TARBALL}
 mv Python-${BASE_VERSION} ${BUILDROOT}/
 
 cd ${BUILDROOT}/Python-${BASE_VERSION}/
-./configure --prefix=${CONFIG_PREFIX}
+./configure --prefix=${CONFIG_PREFIX}/python --enable-optimizations
 make -j4
 sudo make install
 
 # install setuptools
-cd ${CONFIG_PREFIX}
+cd ${CONFIG_PREFIX}/python
 sudo wget https://pypi.python.org/packages/6c/54/f7e9cea6897636a04e74c3954f0d8335cc38f7d01e27eec98026b049a300/setuptools-38.5.1.zip
 sudo unzip setuptools-38.5.1.zip
 cd setuptools-38.5.1
