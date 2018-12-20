@@ -66,7 +66,7 @@
 
     "dmp4agent":
     {
-      "build-name": "dmpp4agent",
+      "build-name": "dmp4agent",
       "dl-url": "https://www.python.org/ftp/python",
       "tarball": "Python-2.7.15.tgz",
       "pkg-src": "/usr/lib/dmp4agent",
