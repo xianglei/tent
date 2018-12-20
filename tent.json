@@ -17,7 +17,21 @@
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
-      "post-uninstall": "post-uninstall.sh"
+      "post-uninstall": "post-uninstall.sh",
+      "depends":
+      {
+        "centos":
+        [
+          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
+          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
+          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
+          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
+        ],
+        "unbuntu":
+        [
+          "liblapack3", "liblapack-dev", "libopenblas-base", "libopenblas-dev", "freetds-common", "freetds-dev", "freetds-bin"
+        ]
+      }
     },
 
     "pylearning3":
@@ -37,7 +51,17 @@
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
-      "post-uninstall": "post-uninstall.sh"
+      "post-uninstall": "post-uninstall.sh",
+      "depends":
+      {
+        "centos":
+        [
+          "lapack", "lapack-devel", "blas", "blas-devel", "freetds", "freetds-devel",
+          "opencv", "opencv-devel", "tk", "tk-devel", "cyrus-sasl", "cyrus-sasl-devel",
+          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
+          "ncurses-devel", "libSM", "libSM-devel", "libstdc++-devel", "libstdc++"
+        ]
+      }
     },
 
     "dmp4agent":
@@ -57,7 +81,16 @@
       "pre-install": "pre-install.sh",
       "post-install": "post-install.sh",
       "pre-uninstall": "pre-uninstall.sh",
-      "post-uninstall": "post-uninstall.sh"
+      "post-uninstall": "post-uninstall.sh",
+      "depends":
+      {
+        "centos":
+        [
+          "cyrus-sasl", "cyrus-sasl-devel",
+          "openssl-devel", "openssl", "snappy-devel", "snappy", "libffi-devel", "sqlite-devel",
+          "ncurses-devel", "libstdc++-devel", "libstdc++"
+        ]
+      }
     }
   }
 }
